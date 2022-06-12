@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="simple-adaptive-slider.min.css">
+  <link rel="stylesheet" href="chief-slider.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>feedback</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="#"><i class="fa fa-angle-left"></i></a>
+        </div>
+      </div>
+    </header>
+    <section class="feedback-title">
+      <div class="title">
+        <h1>Отзывы</h1>
+      </div>
+      <div class="item-review">
+        <button>Видеобзоры</button><button class="active">Отзывы</button><button>Вопросы</button>
+      </div>
+
+    </section>
+    <section class="feedback">
+      <div class="rainting">
+        <div class="stars">
+          <img src="/img/star.svg" alt="#"><img src="/img/star.svg" alt="#"><img src="/img/star.svg" alt="#"><img src="/img/star.svg" alt="#"><img src="/img/star-bad.svg" alt="#">
+          <span>20 отзывов</span>
+        </div>
+        <div class="size">
+          <div class="size-item">
+            <span>Маломерит</span>
+            <div><span class='empty'>0%</span></div>
+          </div>
+          <div class="size-item">
+            <span>Соответствует размеру</span>
+            <div><span>50%</span></div>
+          </div>
+          <div class="size-item">
+            <span>Большемерит</span>
+            <div><span>50%</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback-items">
+        <div v-for="feedback in feedbacks" class="feedback-item">
+          <div class="info">
+            <div class="user"><img src="/img/user.svg" alt="user"><span>{{feedback.user.name }}</span></div>
+            <div class="date"><span>{{feedback.createdDate.slice(0, 10)}}</span></div>
+          </div>
+          <div class="size"><span>Розмер 48: </span><span>соответствует размеру</span></div>
+          <div class="stars">
+            <img src="/img/star.svg" alt="#"><img src="/img/star.svg" alt="#"><img src="/img/star.svg" alt="#"><img src="/img/star-bad.svg" alt="#"><img src="/img/star-bad.svg" alt="#">
+          </div>
+          <div class="main">
+            <p>{{feedback.value }} Я думала, пиджак плотный. Но нет, лёгкий. А брюки - вообще невесомые! В размер.</p>
+            <img v-for="photo in feedback.photos" :src="photo" alt="feedback">
+
+          </div>
+          <div v-for="answer in feedback.answers" class="answer">
+            <img src="/img/Arrows-corner-up-right.svg" alt="#">
+            <div class="main">
+              <div class="user">
+                <div></div><span>Беллавка</span>
+              </div>
+              <p>{{ answer.value }} Мы рады, что вы остались довольны покупкой.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="leave-feedback">
+        <button>Оставить отзыв</button>
+      </div>
+    </section>
+    <div class="test-sleder">
+      <div id="body"></div>
+    </div>
+    <footer>
+      <div class="navbar">
+        <a href="#"><img src="/img/home.svg" alt="#">Главная</a>
+        <a href="#" class="active"><img src="/img/catalog.svg" alt="#">Каталог</a>
+        <a href="#"><img src="/img/cart.svg" alt="#">Корзина</a>
+        <a href="#"><img src="/img/profile.svg" alt="#">Профиль</a>
+        <a href="#"><img src="/img/contact.svg" alt="#">Контакт</a>
+      </div>
+    </footer>
+  </div>
+  <script async src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/da011c4421.js"></script>
+</body>
+
+</html>

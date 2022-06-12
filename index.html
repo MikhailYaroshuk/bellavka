@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="simple-adaptive-slider.min.css">
+  <link rel="stylesheet" href="chief-slider.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>item</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <a href="#"><i class="fa fa-angle-left"></i></a>
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+    </header>
+    <section class='slider'>
+      <div class="itcss">
+        <div class="itcss__items" id='header-slider'>
+        </div>
+        <div class="discount"><span>-{{item?.salePercent}}%</span></div>
+      </div>
+    </section>
+    <section class='about'>
+      <div class="tags">
+        <div class="tags-left">
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-share-nodes"></i>
+        </div>
+        <div class="tags-right">
+          <div class="tag"><a href="#">#лучшее</a></div>
+          <div class="tag"><a href="#">в наличии</a></div>
+          <div class="tag"><a href="#"><i class="fa-brands fa-cotton-bureau"></i>хлопок</a></div>
+        </div>
+      </div>
+      <div class="item-review">
+        <div class="review">
+          <div><img src="/img/Base-video.svg" alt="review"><span>+{{item?.videosCount}}</span><img src="/img/Arrows-arrow-right.svg" alt="#"></div><a href=""><span>Смотреть видеообзоры</span></a>
+        </div>
+        <div class="feedback">
+          <div><img src="/img/Communicate-message.svg" alt="feedback"><span>+{{item?.reviewsCount}}</span><img src="/img/Arrows-arrow-right.svg" alt="#"></div><a href="/feedback.html"><span>Отзывы
+              покупателей</span></a>
+        </div>
+        <div class="questions">
+          <div><img src="/img/Character-help.svg" alt="help"><span>+{{item?.questionsCount}}</span><img src="/img/Arrows-arrow-right.svg" alt="#"></div><a href=""><span>Вопросы по модели</span></a>
+        </div>
+      </div>
+      <div class="info">
+        <div class="title">
+          <h3>{{item?.fullName}}</h2>
+            <span>{{item?.category.value}}</span>
+        </div>
+        <div class="price">
+          <span class="main-price">{{item?.price.retail}}₽</span>
+          <span class="discount">{{item?.price.retailOld}}₽</span>
+          <a href="#">Подробнее <i class="fa-solid fa-angles-down"></i></a>
+        </div>
+        <div class="size">
+          <span>Размеры:</span>
+          <a href="#">Таблица размеров</a>
+          <div class="slider-size">
+            <div class="slider__container">
+              <div class="slider__items" id="size-slider">
+              </div>
+            </div>
+          </div>
+          <div class="height">
+            <span>Рост:</span>
+            <div class="slider" id='height-slider'>
+              <div class="slider__container">
+                <div class="slider__items slider__items_height">
+                  <div class="slider__item">
+                    <span>148</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>150</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>152</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>154</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>156</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>158</span>
+                  </div>
+                  <div class="slider__item">
+                    <span>160</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buy">
+            <button><img src="/img/click.svg" alt="click">купить в 1 клик</button>
+            <button><img src="/img/cart-black.svg" alt="cart"> в корзину</button>
+          </div>
+          <div class="сolors">
+            <span>Цвета:</span>
+            <div class="color-items">
+              <div class="color-item"><a href="#"><img src="/img/color-1.svg" alt="color-1"></a></div>
+              <div class="color-item active"><a href="#"><img src="/img/color-1.svg" alt="color-2"></a></div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section>
+      <div class="recently-watched">
+        <span>Вы недавно смотрели</span>
+        <div class="slider" id='recently-slider'>
+          <div class="slider__container">
+            <div class="slider__items slider__items_recent">
+              <div class="slider__item">
+                <div class="image-block">
+                  <img src="/img/watch1.svg" alt="#">
+                  <button><i class="fa fa-heart"></i></button>
+                </div>
+                <div class="description">
+                  <div class="left-side">
+                    <div class="pricing">
+                      <span class="price">6420₽</span>
+                    </div>
+                    <span class="title">Asv</span>
+                    <span class="type">Платье</span>
+                  </div>
+                  <div class="right-side">
+                    <button class="add">
+                      <img src="/img/add-to-cart.svg" alt="add to cart">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="image-block">
+                  <img src="/img/watch2.svg" alt="#">
+                  <button><i class="fa fa-heart"></i></button>
+                </div>
+                <div class="description">
+                  <div class="left-side">
+                    <div class="pricing">
+                      <span class="price">6420₽</span>
+                      <span class="discount">8000₽</span>
+                    </div>
+                    <span class="title">Asv</span>
+                    <span class="type">Платье</span>
+                  </div>
+                  <div class="right-side">
+                    <button class="add">
+                      <img src="/img/add-to-cart.svg" alt="add to cart">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="image-block">
+                  <img src="/img/watch1.svg" alt="#">
+                  <button><i class="fa fa-heart"></i></button>
+                </div>
+                <div class="description">
+                  <div class="left-side">
+                    <div class="pricing">
+                      <span class="price">6420₽</span>
+                    </div>
+                    <span class="title">Asv</span>
+                    <span class="type">Платье</span>
+                  </div>
+                  <div class="right-side">
+                    <button class="add">
+                      <img src="/img/add-to-cart.svg" alt="add to cart">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="image-block">
+                  <img src="/img/watch2.svg" alt="#">
+                  <button><i class="fa fa-heart"></i></button>
+                </div>
+                <div class="description">
+                  <div class="left-side">
+                    <div class="pricing">
+                      <span class="price">6420₽</span>
+                    </div>
+                    <span class="title">Asv</span>
+                    <span class="type">Платье</span>
+                  </div>
+                  <div class="right-side">
+                    <button class="add">
+                      <img src="/img/add-to-cart.svg" alt="add to cart">
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="navbar">
+        <a href="#"><img src="/img/home.svg" alt="#">Главная</a>
+        <a href="#" class="active"><img src="/img/catalog.svg" alt="#">Каталог</a>
+        <a href="#"><img src="/img/cart.svg" alt="#">Корзина</a>
+        <a href="#"><img src="/img/profile.svg" alt="#">Профиль</a>
+        <a href="#"><img src="/img/contact.svg" alt="#">Контакт</a>
+      </div>
+    </footer>
+  </div>
+
+  <script async src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/da011c4421.js"></script>
+</body>
+
+</html>
